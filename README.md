@@ -1,4 +1,4 @@
-# NIFTY 50 Tail Risk and VaR Analysis
+#Tail Risk and VaR Analysis
 
 Value at Risk (VaR) estimation and non-normality tests on NIFTY 50 daily returns, with event studies on the 2008 financial crisis and the 2020 COVID-19 crash.
 
@@ -42,8 +42,8 @@ Data: 4,072 daily returns on `^NSEI` from Yahoo Finance, ending April 2024. VaR 
 
 ```
 .
-├── 01_var_estimation.ipynb            # Historical, normal, GARCH VaR and breach counts
-├── 02_non_normality_analysis.ipynb    # Normality tests, ACF, ARIMA, GARCH, event studies
+├── var_estimation.ipynb            # Historical, normal, GARCH VaR and breach counts
+├── non_normality_analysis.ipynb    # Normality tests, ACF, ARIMA, GARCH, event studies
 ├── figures/                           # Plots used in this README
 ├── requirements.txt
 └── README.md
@@ -51,13 +51,13 @@ Data: 4,072 daily returns on `^NSEI` from Yahoo Finance, ending April 2024. VaR 
 
 ## Methods
 
-**VaR estimation** (`01_var_estimation.ipynb`)
+**VaR estimation** (`var_estimation.ipynb`)
 - Historical simulation: the 5th and 1st percentile of observed daily returns.
 - Normal: `VaR = mu - z * sigma` from the sample mean and standard deviation.
 - GARCH(1,1): fitted with the `arch` library. Daily conditional volatility feeds a normal quantile.
 - ARIMA: models the expected daily return, then applies a normal quantile to the residuals.
 
-**Non-normality analysis** (`02_non_normality_analysis.ipynb`)
+**Non-normality analysis** (`non_normality_analysis.ipynb`)
 - Skewness and kurtosis for the full sample, 2008 to 2009, and 2020.
 - Shapiro-Wilk, Kolmogorov-Smirnov, and Anderson-Darling normality tests.
 - Gaussian and Student's t fits with probability plots.
@@ -68,12 +68,12 @@ Data: 4,072 daily returns on `^NSEI` from Yahoo Finance, ending April 2024. VaR 
 
 ```bash
 git clone https://github.com/<your-username>/NIFTY50-Tail-Risk-and-VaR-Analysis.git
-cd NIFTY50-Tail-Risk-and-VaR-Analysis
+cd Tail-Risk-and-VaR-Analysis
 pip install -r requirements.txt
 jupyter notebook
 ```
 
-Run `01_var_estimation.ipynb` first, then `02_non_normality_analysis.ipynb`. Both notebooks download data from Yahoo Finance, so they need an internet connection.
+Run `var_estimation.ipynb` first, then `non_normality_analysis.ipynb`. Both notebooks download data from Yahoo Finance, so they need an internet connection.
 
 **Requirements:** Python 3.9+, pandas, NumPy, SciPy, statsmodels, arch, Matplotlib, yfinance.
 
