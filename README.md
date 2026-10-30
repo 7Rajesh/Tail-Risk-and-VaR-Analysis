@@ -67,7 +67,7 @@ Data: 4,072 daily returns on `^NSEI` from Yahoo Finance, ending April 2024. VaR 
 ## Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/NIFTY50-Tail-Risk-and-VaR-Analysis.git
+git clone https://github.com/<your-username>/Tail-Risk-and-VaR-Analysis.git
 cd Tail-Risk-and-VaR-Analysis
 pip install -r requirements.txt
 jupyter notebook
