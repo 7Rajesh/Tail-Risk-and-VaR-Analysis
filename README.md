@@ -34,9 +34,8 @@ Data: 4,072 daily returns on `^NSEI` from Yahoo Finance, ending April 2024. VaR 
 - Skewness is positive in the 2008 to 2009 window (0.46) and negative in 2020 (-1.42). Kurtosis exceeds the normal value of 3 in the full sample and in both windows.
 - In March 2020, trading volume spiked while cumulative abnormal returns (CAR) fell.
 
-![VaR comparison](figures/var_comparison.png)
 
-![Rolling volatility](figures/rolling_volatility.png)
+
 
 ## Repository Structure
 
