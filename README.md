@@ -1,4 +1,4 @@
-##Tail Risk and VaR Analysis
+## Tail Risk and VaR Analysis
 
 Value at Risk (VaR) estimation and non-normality tests on NIFTY 50 daily returns, with event studies on the 2008 financial crisis and the 2020 COVID-19 crash.
 
